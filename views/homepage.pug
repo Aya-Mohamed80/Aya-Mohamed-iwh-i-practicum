@@ -1,0 +1,27 @@
+
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Custom Object Table
+    a(href="/update-cobj") Add to this table
+    table
+      thead
+        tr
+          th First Name
+          th Last Name
+          th Email
+          th University
+          th Name
+          th Age
+      tbody
+        each contact in contacts
+          tr
+            td= contact.properties.firstname
+            td= contact.properties.lastname
+            td= contact.properties.email
+            td= contact.properties.university
+            td= contact.properties.lname
+            td= contact.properties.age
